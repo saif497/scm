@@ -1,11 +1,17 @@
 package com.scm.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Contact {
 
     @Id
@@ -20,8 +26,11 @@ public class Contact {
     private boolean favorite = false;
     private String websiteLink;
     private String linkedInLink;
-
 //    private List<String> socialLinks = new ArrayList<>();
+    private String cloudinaryImagePublicId;
+
+
+
     @ManyToOne
     private User user;
 
