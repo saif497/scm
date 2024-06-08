@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacts Page </title>
+</head>
+<body>
+<div id="content" >
+    <!--sidebar-->
+    <div th:if="${loggedInuser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+    </div>
+    <div class="sm:pl-64 pt-20" style="height: 1000px">
+        <div>
+            <h1>This is Add Contact Form </h1>
+        </div>
+    </div>
+</div>
+<script>
+    console.log("This is a profile Page")
+</script>
+</body>
+</html>

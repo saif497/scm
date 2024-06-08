@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title data-th-text="${loggedInuser.name} +' | SCM'">Profile Page </title>
+</head>
+<body>
+<div id="content" >
+    <!--sidebar-->
+    <div th:if="${loggedInuser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+    </div>
+
+    <div class="sm:pl-64 pt-20" style="height: 1000px">
+       <div class="flex justify-center flex-col items-center">
+           <h1 class="text-5xl">Welcome to Profile Page</h1>
+           <p>This is a profile pageThis is a profile pageThis is a profile pageThis is a profil
+               e pageThis is a profile pageThis is a profile page</p>
+       </div>
+    </div>
+</div>
+<script>
+    console.log("This is a profile Page")
+</script>
+</body>
+</html>
