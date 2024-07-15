@@ -21,27 +21,18 @@
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous"
           referrerpolicy="no-referrer" />
-
-
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
 
 <!-- Common Header -->
-
-
-
 <!-- User Is Logged in : Navbar -->
     <div th:if="${loggedInuser}">
         <div data-th-replace="~{user/user_navbar :: user-navbar}"></div>
     </div>
-
-
 <!-- User Is Not logged in : Navbar-->
     <div th:unless="${loggedInuser}">
-        <div data-th-replace="~{navbar :: navbar}">
-
-        </div>
+        <div data-th-replace="~{navbar :: navbar}"></div>
     </div>
 <!-- main content -->
     <div class="p-4">
@@ -53,6 +44,7 @@
 
 <!--flow bite javascript-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <th:block data-th-replace="${script}"></th:block>
 <script data-th-src="@{'/css/js/script.js'}"></script>
 </body>

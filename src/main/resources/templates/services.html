@@ -10,7 +10,85 @@
 </head>
 <body>
 <section id="content">
-    <h1>Welcome to Services Page</h1>
+<!--    <h1>Welcome to Services Page</h1>-->
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-4">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">Our Services</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-address-book"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Contact Organization</h3>
+                <p class="text-gray-600 dark:text-gray-400">Efficiently organize and manage your contacts with our intuitive interface.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Advanced Search</h3>
+                <p class="text-gray-600 dark:text-gray-400">Quickly find the contacts you need with our powerful search and filtering options.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Sync Across Devices</h3>
+                <p class="text-gray-600 dark:text-gray-400">Access your contacts from anywhere with seamless synchronization across all your devices.</p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Contact Sharing</h3>
+                <p class="text-gray-600 dark:text-gray-400">Easily share contacts or groups of contacts with your team or colleagues.</p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Insights and Analytics</h3>
+                <p class="text-gray-600 dark:text-gray-400">Gain valuable insights into your contact network with our analytics tools.</p>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <div class="text-4xl text-blue-600 dark:text-blue-400 mb-4">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Data Security</h3>
+                <p class="text-gray-600 dark:text-gray-400">Rest easy knowing your contact information is protected with our advanced security measures.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-8 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">Ready to get started?</h3>
+<!--            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 inline-block">Sign Up Now</a>-->
+            <a data-th-href="@{'/register'}"
+               type="button"
+               class="relative py-2 px-8 w-60 text-center border border-blue-700 text-black text-base font-bold nded-full
+                            overflow-hidden bg-white rounded-full transition-all duration-400
+                            ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg
+                            active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full
+                            before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all
+                            before:duration-500 before:ease-in-out before:z-[-1]
+                            before:rounded-full hover:before:left-0">
+                Sign Up Now
+            </a>
+        </div>
+    </main>
+
 </section>
 <script>
     console.log("Services Page")

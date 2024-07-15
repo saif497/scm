@@ -1,7 +1,7 @@
 
 
 <nav data-th-fragment="user-navbar"
-     class="bg-white border-gray-200 shadow-sm dark:bg-gray-900 sm:pl-64 fixed w-full top-0 left-0 right-0">
+     class="z-40 bg-white border-gray-200 shadow-sm dark:bg-gray-900 sm:pl-64 fixed w-full top-0 left-0 right-0">
 
     <div class="max-w-screen-xl
     flex flex-wrap items-center justify-between
@@ -113,6 +113,7 @@
             <ul class="flex flex-col font-medium
             p-4 md:p-0 mt-4
             rounded-lg bg-gray-50
+            space-y-2
             md:space-x-8
             rtl:space-x-reverse
             md:flex-row md:mt-0 md:border-0
@@ -120,7 +121,7 @@
                 <!--home page link-->
                 <li>
                     <a data-th-href="@{'/home'}"
-                       class="block py-2 px-3 md:p-0
+                       class="block py-2 px-3 md:p-2
                     text-white bg-blue-700
                     rounded md:bg-transparent
                     md:text-blue-700 md:dark:text-blue-500"

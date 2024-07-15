@@ -15,13 +15,88 @@
         <div data-th-replace="~{user/sidebar :: sidebar}"></div>
     </div>
 
-    <div class="sm:pl-64 pt-20" style="height: 1000px">
-       <div class="flex justify-center flex-col items-center">
-           <h1 class="text-5xl">Welcome to Profile Page</h1>
-           <p>This is a profile pageThis is a profile pageThis is a profile pageThis is a profil
-               e pageThis is a profile pageThis is a profile page</p>
-       </div>
-    </div>
+<!--    <div class="sm:pl-64 pt-20" style="height: 1000px">-->
+<!--       <div class="flex justify-center flex-col items-center">-->
+<!--           <h1 class="text-5xl">Welcome to Profile Page</h1>-->
+<!--           <p>This is a profile pageThis is a profile pageThis is a profile pageThis is a profil-->
+<!--               e pageThis is a profile pageThis is a profile page</p>-->
+<!--       </div>-->
+<!--    </div>-->
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto sm:pl-64 pt-20">
+        <div class="max-w-4xl mx-auto">
+            <!-- User Profile Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Cover Photo -->
+                <div class="h-44 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+
+                <!-- Profile Info -->
+                <div class="relative px-4 py-6  dark:bg-gray-800">
+                    <!-- Profile Picture -->
+                    <div class="absolute -top-16 left-4">
+                        <img src="https://via.placeholder.com/150"
+                             alt="Profile Picture"
+                             class="w-32 h-32 rounded-full border-4 border-white">
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="ml-36 dark:text-white">
+                        <h2 data-th-text="${loggedInuser.name}"
+                                class="text-3xl font-bold">John Doe</h2>
+                        <p data-th-text="${loggedInuser.email}"
+                                class="text-gray-600 dark:text-white">Software Developer</p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 ">Contact Information</h3>
+                            <p><span class="font-medium">Email:</span> <span data-th-text="${loggedInuser.email}">mdsaifalam@gmail.com</span></p>
+                            <p><span class="font-medium">Phone:</span> <span data-th-text="${loggedInuser.phoneNumber}">+91 6206 XXXX XX</span></p>
+                            <p><span class="font-medium">Address:</span> Ranchi, Jharkhand</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Social Media</h3>
+                            <p><span class="font-medium">LinkedIn:</span> linkedin.com/in/johndoe</p>
+                            <p><span class="font-medium">Twitter:</span> @johndoe</p>
+                            <p><span class="font-medium">GitHub:</span> github.com/johndoe</p>
+                        </div>
+                    </div>
+
+                    <!-- About Your Self  -->
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold mb-2">About YourSelf</h3>
+                        <p data-th-text="${loggedInuser.about}"
+                           class="">
+                            Experienced software developer with a passion for creating innovative solutions.
+                            Skilled in JavaScript, React, and Node.js. Always eager to learn new technologies
+                            and tackle challenging projects.
+                        </p>
+                    </div>
+
+                    <!-- Skills -->
+<!--                    <div class="mt-6">-->
+<!--                        <h3 class="text-lg font-semibold mb-2">Skills</h3>-->
+<!--                        <div class="flex flex-wrap gap-2">-->
+<!--                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>-->
+<!--                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>-->
+<!--                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Node.js</span>-->
+<!--                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>-->
+<!--                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Git</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+            <!-- Edit Profile Button -->
+            <div class="mt-6 text-center">
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+    </main>
 </div>
 <script>
     console.log("This is a profile Page")
